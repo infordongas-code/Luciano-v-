@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raízes & Vozes — Portal da Consciência Negra</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <span class="badge-20">20 NOV</span>
+        <div>
+          <h1>Raízes &amp; Vozes</h1>
+          <p>Memória, Cultura e Consciência Negra</p>
+        </div>
+      </div>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#historia">História</a></li>
+          <li><a href="#personalidades">Personalidades</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#mural">Mural</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="pill">Educação • Respeito • Igualdade Racial</span>
+        <h2>Conhecer a história é o primeiro passo para transformar o presente.</h2>
+        <p>
+          O Dia Nacional de Zumbi e da Consciência Negra celebra a resistência, a cultura e as
+          contribuições fundamentais do povo negro na formação da sociedade brasileira.
+        </p>
+        <div class="hero-actions">
+          <a href="#personalidades" class="btn btn-primary">Explorar Personalidades</a>
+          <a href="#quiz" class="btn btn-outline">Testar Conhecimentos</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Por que 20 de Novembro?</h3>
+        <p>
+          A data marca o falecimento de <strong>Zumbi dos Palmares</strong> (1695), líder do
+          Quilombo dos Palmares, maior símbolo de luta contra a escravidão e pela liberdade no Brasil.
+        </p>
+        <ul class="hero-stats">
+          <li>
+            <strong>+300 anos</strong>
+            <span>de luta e resistência cultural</span>
+          </li>
+          <li>
+            <strong>Lei 10.639/03</strong>
+            <span>Ensino da História e Cultura Afro-Brasileira</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Linha do Tempo -->
+    <section id="historia" class="section">
+      <div class="section-head">
+        <h2>Marcos Históricos da Luta e Conquista</h2>
+        <p>Acontecimentos fundamentais que moldaram a busca por liberdade e direitos no Brasil.</p>
+      </div>
+      <div class="timeline">
+        <article class="time-item">
+          <span class="year">1597 – 1695</span>
+          <h3>Quilombo dos Palmares</h3>
+          <p>
+            Localizado na Serra da Barriga (atual Alagoas), reuniu milhares de pessoas livres que
+            resistiram ao sistema escravocrata sob lideranças como Ganga Zumba, Dandara e Zumbi.
+          </p>
+        </article>
+        <article class="time-item">
+          <span class="year">1888</span>
+          <h3>Abolição Formal da Escravidão</h3>
+          <p>
+            Fruto de intensa pressão popular, revoltas e do movimento abolicionista liderado por
+            nomes como Luís Gama, José do Patrocínio e André Rebouças.
+          </p>
+        </article>
+        <article class="time-item">
+          <span class="year">1971</span>
+          <h3>Criação do 20 de Novembro</h3>
+          <p>
+            O poeta e pesquisador Oliveira Silveira e o Grupo Palmares, em Porto Alegre (RS),
+            propuseram o 20 de novembro como data de celebração da consciência negra.
+          </p>
+        </article>
+        <article class="time-item">
+          <span class="year">2003 &amp; 2023</span>
+          <h3>Educação e Feriado Nacional</h3>
+          <p>
+            A Lei 10.639/2003 tornou obrigatório o ensino da cultura afro-brasileira nas escolas, e a
+            Lei 14.759/2023 instituiu o 20 de novembro como feriado nacional em todo o país.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Personalidades -->
+    <section id="personalidades" class="section">
+      <div class="section-head">
+        <h2>Personalidades Inspiradoras</h2>
+        <p>Filtre por área de atuação para conhecer figuras que marcaram a história do Brasil.</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filtrar personalidades">
+        <button class="filter-btn active" data-filter="todos">Todas</button>
+        <button class="filter-btn" data-filter="resistencia">Resistência</button>
+        <button class="filter-btn" data-filter="literatura">Literatura &amp; Arte</button>
+        <button class="filter-btn" data-filter="ciencia">Ciência &amp; Direito</button>
+      </div>
+
+      <div id="cards-personalidades" class="cards-grid"></div>
+    </section>
+
+    <!-- Quiz Interativo -->
+    <section id="quiz" class="section">
+      <div class="section-head">
+        <h2>Quiz da Consciência Negra</h2>
+        <p>Teste seus conhecimentos sobre história, cultura e personalidades afro-brasileiras.</p>
+      </div>
+      <div class="quiz-box">
+        <div class="quiz-top">
+          <span id="quiz-progresso">Pergunta 1 de 5</span>
+          <span id="quiz-placar">Acertos: 0</span>
+        </div>
+        <h3 id="quiz-pergunta">Carregando pergunta...</h3>
+        <div id="quiz-opcoes" class="quiz-options"></div>
+        <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
+        <div class="quiz-footer">
+          <button id="btn-proxima" class="btn btn-primary" hidden>Próxima Pergunta</button>
+          <button id="btn-reiniciar" class="btn btn-outline" hidden>Refazer Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mural de Reflexões -->
+    <section id="mural" class="section">
+      <div class="section-head">
+        <h2>Mural de Compromisso Antirracista</h2>
+        <p>Deixe sua mensagem de respeito, valorização cultural ou compromisso contra o preconceito.</p>
+      </div>
+      <div class="mural-grid">
+        <form id="form-mural" class="mural-form">
+          <label for="autor">Seu nome ou turma</label>
+          <input type="text" id="autor" placeholder="Ex: Ana Clara — 2º Ano" required />
+
+          <label for="mensagem">Sua mensagem de reflexão</label>
+          <textarea
+            id="mensagem"
+            rows="4"
+            placeholder="Escreva uma frase sobre igualdade, cultura ou respeito..."
+            required
+          ></textarea>
+
+          <button type="submit" class="btn btn-primary">Publicar no Mural</button>
+        </form>
+
+        <div id="lista-mural" class="mural-cards"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p><strong>Raízes &amp; Vozes</strong> — Projeto Educativo sobre Consciência Negra.</p>
+      <p class="footer-note">Desenvolvido em HTML5, CSS3 e JavaScript puro para uso escolar e comunitário.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
